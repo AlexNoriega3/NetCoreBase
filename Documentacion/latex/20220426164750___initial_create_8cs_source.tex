@@ -1,0 +1,833 @@
+\hypertarget{20220426164750___initial_create_8cs_source}{}\doxysection{20220426164750\+\_\+\+Initial\+Create.\+cs}
+\label{20220426164750___initial_create_8cs_source}\index{terravital-\/admin-\/edificios.Dal/Migrations/20220426164750\_InitialCreate.cs@{terravital-\/admin-\/edificios.Dal/Migrations/20220426164750\_InitialCreate.cs}}
+\mbox{\hyperlink{20220426164750___initial_create_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Metadata;}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Migrations;}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00005}00005 \textcolor{preprocessor}{\#nullable disable}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00007}\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_dal_1_1_migrations}{00007}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_dal_1_1_migrations}{terravital\_admin\_edificios.Dal.Migrations}}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00009}\mbox{\hyperlink{classterravital__admin__edificios_1_1_dal_1_1_migrations_1_1_initial_create}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{partial class }\mbox{\hyperlink{classterravital__admin__edificios_1_1_dal_1_1_migrations_1_1_initial_create}{InitialCreate}} : Migration}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00011}\mbox{\hyperlink{classterravital__admin__edificios_1_1_dal_1_1_migrations_1_1_initial_create_a087bf8093e25e921866a5681b8fd37ff}{00011}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{classterravital__admin__edificios_1_1_dal_1_1_migrations_1_1_initial_create_a087bf8093e25e921866a5681b8fd37ff}{Up}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00012}00012         \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00013}00013             migrationBuilder.AlterDatabase()}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00014}00014                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00016}00016             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00017}00017                 name: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00018}00018                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00019}00019                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00020}00020                     Id = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00021}00021                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00022}00022                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00023}00023                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00024}00024                     NormalizedName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00025}00025                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00026}00026                     ConcurrencyStamp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00027}00027                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00028}00028                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00029}00029                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00030}00030                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00031}00031                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetRoles"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00032}00032                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00033}00033                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00035}00035             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00036}00036                 name: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00037}00037                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00038}00038                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00039}00039                     Id = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00040}00040                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00041}00041                     Discriminator = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00042}00042                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00043}00043                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00044}00044                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00045}00045                     Url = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00046}00046                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00047}00047                     CountryCode = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00048}00048                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00049}00049                     Phone = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(20)"{}}, maxLength: 20, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00050}00050                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00051}00051                     Country = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(50)"{}}, maxLength: 50, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00052}00052                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00053}00053                     City = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(50)"{}}, maxLength: 50, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00054}00054                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00055}00055                     Address = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(200)"{}}, maxLength: 200, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00056}00056                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00057}00057                     BirthDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00058}00058                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{true}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00059}00059                     UserName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00060}00060                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00061}00061                     NormalizedUserName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00062}00062                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00063}00063                     Email = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00064}00064                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00065}00065                     NormalizedEmail = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(256)"{}}, maxLength: 256, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00066}00066                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00067}00067                     EmailConfirmed = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00068}00068                     PasswordHash = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00069}00069                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00070}00070                     SecurityStamp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00071}00071                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00072}00072                     ConcurrencyStamp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00073}00073                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00074}00074                     PhoneNumber = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00075}00075                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00076}00076                     PhoneNumberConfirmed = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00077}00077                     TwoFactorEnabled = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00078}00078                     LockoutEnd = table.Column<DateTimeOffset>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00079}00079                     LockoutEnabled = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00080}00080                     AccessFailedCount = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00081}00081                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00082}00082                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00083}00083                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00084}00084                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUsers"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00085}00085                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00086}00086                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00088}00088             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00089}00089                 name: \textcolor{stringliteral}{"{}LocalStatus"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00090}00090                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00091}00091                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00092}00092                     LocalStatusId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00093}00093                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00094}00094                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00095}00095                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00096}00096                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00097}00097                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00098}00098                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00099}00099                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00100}00100                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00101}00101                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00102}00102                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00103}00103                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00104}00104                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00105}00105                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00106}00106                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00107}00107                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00108}00108                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00109}00109                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00110}00110                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00111}00111                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_LocalStatus"{}}, x => x.LocalStatusId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00112}00112                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00113}00113                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00115}00115             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00116}00116                 name: \textcolor{stringliteral}{"{}LocalType"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00117}00117                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00118}00118                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00119}00119                     LocalTypeId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00120}00120                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00121}00121                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00122}00122                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00123}00123                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00124}00124                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00125}00125                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00126}00126                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00127}00127                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00128}00128                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00129}00129                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00130}00130                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00131}00131                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00132}00132                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00133}00133                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00134}00134                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00135}00135                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00136}00136                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00137}00137                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00138}00138                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_LocalType"{}}, x => x.LocalTypeId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00139}00139                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00140}00140                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00142}00142             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00143}00143                 name: \textcolor{stringliteral}{"{}Project"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00144}00144                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00145}00145                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00146}00146                     ProjectId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00147}00147                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00148}00148                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00149}00149                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00150}00150                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00151}00151                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00152}00152                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(1000)"{}}, maxLength: 1000, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00153}00153                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00154}00154                     Address = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00155}00155                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00156}00156                     CP = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00157}00157                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00158}00158                     State = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00159}00159                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00160}00160                     City = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00161}00161                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00162}00162                     RFC = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00163}00163                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00164}00164                     Logo = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(2000)"{}}, maxLength: 2000, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00165}00165                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00166}00166                     LogoApp = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(2000)"{}}, maxLength: 2000, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00167}00167                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00168}00168                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00169}00169                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00170}00170                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00171}00171                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00172}00172                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00173}00173                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00174}00174                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00175}00175                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00176}00176                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00177}00177                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00178}00178                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00179}00179                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Project"{}}, x => x.ProjectId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00180}00180                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00181}00181                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00183}00183             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00184}00184                 name: \textcolor{stringliteral}{"{}AspNetRoleClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00185}00185                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00186}00186                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00187}00187                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00188}00188                         .Annotation(\textcolor{stringliteral}{"{}MySql:ValueGenerationStrategy"{}}, MySqlValueGenerationStrategy.IdentityColumn),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00189}00189                     RoleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00190}00190                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00191}00191                     ClaimType = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00192}00192                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00193}00193                     ClaimValue = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00194}00194                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00195}00195                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00196}00196                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00197}00197                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00198}00198                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetRoleClaims"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00199}00199                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00200}00200                         name: \textcolor{stringliteral}{"{}FK\_AspNetRoleClaims\_AspNetRoles\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00201}00201                         column: x => x.RoleId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00202}00202                         principalTable: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00203}00203                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00204}00204                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00205}00205                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00206}00206                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00208}00208             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00209}00209                 name: \textcolor{stringliteral}{"{}AspNetUserClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00210}00210                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00211}00211                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00212}00212                     Id = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00213}00213                         .Annotation(\textcolor{stringliteral}{"{}MySql:ValueGenerationStrategy"{}}, MySqlValueGenerationStrategy.IdentityColumn),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00214}00214                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00215}00215                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00216}00216                     ClaimType = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00217}00217                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00218}00218                     ClaimValue = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00219}00219                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00220}00220                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00221}00221                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00222}00222                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00223}00223                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserClaims"{}}, x => x.Id);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00224}00224                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00225}00225                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserClaims\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00226}00226                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00227}00227                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00228}00228                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00229}00229                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00230}00230                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00231}00231                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00232}00232 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00233}00233             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00234}00234                 name: \textcolor{stringliteral}{"{}AspNetUserLogins"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00235}00235                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00236}00236                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00237}00237                     LoginProvider = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00238}00238                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00239}00239                     ProviderKey = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00240}00240                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00241}00241                     ProviderDisplayName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00242}00242                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00243}00243                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00244}00244                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00245}00245                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00246}00246                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00247}00247                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00248}00248                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserLogins"{}}, x => \textcolor{keyword}{new} \{ x.LoginProvider, x.ProviderKey \});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00249}00249                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00250}00250                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserLogins\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00251}00251                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00252}00252                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00253}00253                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00254}00254                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00255}00255                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00256}00256                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00258}00258             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00259}00259                 name: \textcolor{stringliteral}{"{}AspNetUserRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00260}00260                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00261}00261                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00262}00262                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00263}00263                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00264}00264                     RoleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00265}00265                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00266}00266                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00267}00267                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00268}00268                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00269}00269                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserRoles"{}}, x => \textcolor{keyword}{new} \{ x.UserId, x.RoleId \});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00270}00270                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00271}00271                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserRoles\_AspNetRoles\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00272}00272                         column: x => x.RoleId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00273}00273                         principalTable: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00274}00274                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00275}00275                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00276}00276                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00277}00277                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserRoles\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00278}00278                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00279}00279                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00280}00280                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00281}00281                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00282}00282                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00283}00283                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00284}00284 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00285}00285             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00286}00286                 name: \textcolor{stringliteral}{"{}AspNetUserTokens"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00287}00287                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00288}00288                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00289}00289                     UserId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00290}00290                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00291}00291                     LoginProvider = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00292}00292                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00293}00293                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00294}00294                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00295}00295                     Value = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}longtext"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00296}00296                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00297}00297                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00298}00298                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00299}00299                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00300}00300                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_AspNetUserTokens"{}}, x => \textcolor{keyword}{new} \{ x.UserId, x.LoginProvider, x.Name \});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00301}00301                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00302}00302                         name: \textcolor{stringliteral}{"{}FK\_AspNetUserTokens\_AspNetUsers\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00303}00303                         column: x => x.UserId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00304}00304                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00305}00305                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00306}00306                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00307}00307                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00308}00308                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00309}00309 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00310}00310             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00311}00311                 name: \textcolor{stringliteral}{"{}Contact"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00312}00312                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00313}00313                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00314}00314                     ContactId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00315}00315                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00316}00316                     ProjectId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00317}00317                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00318}00318                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00319}00319                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00320}00320                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00321}00321                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00322}00322                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(50)"{}}, maxLength: 50, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00323}00323                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00324}00324                     LastName = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00325}00325                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00326}00326                     Phone = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(20)"{}}, maxLength: 20, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00327}00327                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00328}00328                     Email = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(40)"{}}, maxLength: 40, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00329}00329                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00330}00330                     Address = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(300)"{}}, maxLength: 300, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00331}00331                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00332}00332                     CP = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(10)"{}}, maxLength: 10, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00333}00333                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00334}00334                     State = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(20)"{}}, maxLength: 20, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00335}00335                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00336}00336                     City = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00337}00337                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00338}00338                     RFC = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(15)"{}}, maxLength: 15, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00339}00339                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00340}00340                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00341}00341                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00342}00342                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00343}00343                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00344}00344                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00345}00345                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00346}00346                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00347}00347                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00348}00348                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00349}00349                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00350}00350                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00351}00351                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Contact"{}}, x => x.ContactId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00352}00352                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00353}00353                         name: \textcolor{stringliteral}{"{}FK\_Contact\_Project\_ProjectId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00354}00354                         column: x => x.ProjectId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00355}00355                         principalTable: \textcolor{stringliteral}{"{}Project"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00356}00356                         principalColumn: \textcolor{stringliteral}{"{}ProjectId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00357}00357                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00358}00358                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00359}00359 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00360}00360             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00361}00361                 name: \textcolor{stringliteral}{"{}Level"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00362}00362                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00363}00363                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00364}00364                     LevelId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00365}00365                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00366}00366                     ProjectId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00367}00367                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00368}00368                     ContactId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00369}00369                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00370}00370                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00371}00371                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00372}00372                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00373}00373                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00374}00374                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00375}00375                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00376}00376                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00377}00377                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00378}00378                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00379}00379                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00380}00380                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00381}00381                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00382}00382                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00383}00383                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00384}00384                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00385}00385                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00386}00386                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00387}00387                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Level"{}}, x => x.LevelId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00388}00388                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00389}00389                         name: \textcolor{stringliteral}{"{}FK\_Level\_Contact\_ContactId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00390}00390                         column: x => x.ContactId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00391}00391                         principalTable: \textcolor{stringliteral}{"{}Contact"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00392}00392                         principalColumn: \textcolor{stringliteral}{"{}ContactId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00393}00393                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00394}00394                         name: \textcolor{stringliteral}{"{}FK\_Level\_Project\_ProjectId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00395}00395                         column: x => x.ProjectId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00396}00396                         principalTable: \textcolor{stringliteral}{"{}Project"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00397}00397                         principalColumn: \textcolor{stringliteral}{"{}ProjectId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00398}00398                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00399}00399                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00400}00400 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00401}00401             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00402}00402                 name: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00403}00403                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00404}00404                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00405}00405                     LocalId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00406}00406                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00407}00407                     LevelId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00408}00408                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00409}00409                     StatusId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00410}00410                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00411}00411                     TypeId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00412}00412                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00413}00413                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00414}00414                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00415}00415                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00416}00416                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00417}00417                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00418}00418                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00419}00419                     Meters2 = table.Column<decimal>(type: \textcolor{stringliteral}{"{}decimal(18,4)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}0.0"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00420}00420                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00421}00421                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00422}00422                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00423}00423                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00424}00424                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00425}00425                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00426}00426                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00427}00427                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00428}00428                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00429}00429                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00430}00430                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00431}00431                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Local"{}}, x => x.LocalId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00432}00432                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00433}00433                         name: \textcolor{stringliteral}{"{}FK\_Local\_Level\_LevelId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00434}00434                         column: x => x.LevelId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00435}00435                         principalTable: \textcolor{stringliteral}{"{}Level"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00436}00436                         principalColumn: \textcolor{stringliteral}{"{}LevelId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00437}00437                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00438}00438                         name: \textcolor{stringliteral}{"{}FK\_Local\_LocalStatus\_StatusId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00439}00439                         column: x => x.StatusId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00440}00440                         principalTable: \textcolor{stringliteral}{"{}LocalStatus"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00441}00441                         principalColumn: \textcolor{stringliteral}{"{}LocalStatusId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00442}00442                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00443}00443                         name: \textcolor{stringliteral}{"{}FK\_Local\_LocalType\_TypeId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00444}00444                         column: x => x.TypeId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00445}00445                         principalTable: \textcolor{stringliteral}{"{}LocalType"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00446}00446                         principalColumn: \textcolor{stringliteral}{"{}LocalTypeId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00447}00447                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00448}00448                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00449}00449 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00450}00450             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00451}00451                 name: \textcolor{stringliteral}{"{}ContactLocal"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00452}00452                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00453}00453                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00454}00454                     ContactsContactId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00455}00455                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00456}00456                     LocalsLocalId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00457}00457                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00458}00458                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00459}00459                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00460}00460                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00461}00461                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_ContactLocal"{}}, x => \textcolor{keyword}{new} \{ x.ContactsContactId, x.LocalsLocalId \});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00462}00462                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00463}00463                         name: \textcolor{stringliteral}{"{}FK\_ContactLocal\_Contact\_ContactsContactId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00464}00464                         column: x => x.ContactsContactId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00465}00465                         principalTable: \textcolor{stringliteral}{"{}Contact"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00466}00466                         principalColumn: \textcolor{stringliteral}{"{}ContactId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00467}00467                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00468}00468                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00469}00469                         name: \textcolor{stringliteral}{"{}FK\_ContactLocal\_Local\_LocalsLocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00470}00470                         column: x => x.LocalsLocalId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00471}00471                         principalTable: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00472}00472                         principalColumn: \textcolor{stringliteral}{"{}LocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00473}00473                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00474}00474                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00475}00475                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00476}00476 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00477}00477             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00478}00478                 name: \textcolor{stringliteral}{"{}Module"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00479}00479                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00480}00480                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00481}00481                     ModuleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00482}00482                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00483}00483                     LocalId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00484}00484                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00485}00485                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00486}00486                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00487}00487                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00488}00488                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00489}00489                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00490}00490                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00491}00491                     LevelId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00492}00492                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00493}00493                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00494}00494                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00495}00495                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00496}00496                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00497}00497                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00498}00498                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00499}00499                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00500}00500                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00501}00501                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00502}00502                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00503}00503                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00504}00504                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Module"{}}, x => x.ModuleId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00505}00505                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00506}00506                         name: \textcolor{stringliteral}{"{}FK\_Module\_Level\_LevelId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00507}00507                         column: x => x.LevelId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00508}00508                         principalTable: \textcolor{stringliteral}{"{}Level"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00509}00509                         principalColumn: \textcolor{stringliteral}{"{}LevelId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00510}00510                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00511}00511                         name: \textcolor{stringliteral}{"{}FK\_Module\_Local\_LocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00512}00512                         column: x => x.LocalId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00513}00513                         principalTable: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00514}00514                         principalColumn: \textcolor{stringliteral}{"{}LocalId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00515}00515                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00516}00516                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00517}00517 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00518}00518             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00519}00519                 name: \textcolor{stringliteral}{"{}Visit"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00520}00520                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00521}00521                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00522}00522                     VisitId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00523}00523                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00524}00524                     Id = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00525}00525                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00526}00526                     LocalId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00527}00527                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00528}00528                     Date = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}date"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00529}00529                     StartHour = table.Column<TimeOnly>(type: \textcolor{stringliteral}{"{}time(6)"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00530}00530                     EndHour = table.Column<TimeOnly>(type: \textcolor{stringliteral}{"{}time(6)"{}}, nullable: \textcolor{keyword}{false}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00531}00531                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00532}00532                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00533}00533                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00534}00534                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00535}00535                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00536}00536                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00537}00537                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00538}00538                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00539}00539                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00540}00540                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00541}00541                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00542}00542                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Visit"{}}, x => x.VisitId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00543}00543                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00544}00544                         name: \textcolor{stringliteral}{"{}FK\_Visit\_AspNetUsers\_Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00545}00545                         column: x => x.Id,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00546}00546                         principalTable: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00547}00547                         principalColumn: \textcolor{stringliteral}{"{}Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00548}00548                         onDelete: ReferentialAction.Cascade);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00549}00549                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00550}00550                         name: \textcolor{stringliteral}{"{}FK\_Visit\_Local\_LocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00551}00551                         column: x => x.LocalId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00552}00552                         principalTable: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00553}00553                         principalColumn: \textcolor{stringliteral}{"{}LocalId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00554}00554                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00555}00555                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00556}00556 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00557}00557             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00558}00558                 name: \textcolor{stringliteral}{"{}Department"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00559}00559                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00560}00560                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00561}00561                     DepartmentId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00562}00562                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00563}00563                     ModuleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00564}00564                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00565}00565                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00566}00566                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00567}00567                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00568}00568                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00569}00569                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00570}00570                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00571}00571                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00572}00572                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00573}00573                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00574}00574                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00575}00575                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00576}00576                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00577}00577                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00578}00578                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00579}00579                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00580}00580                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00581}00581                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00582}00582                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Department"{}}, x => x.DepartmentId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00583}00583                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00584}00584                         name: \textcolor{stringliteral}{"{}FK\_Department\_Module\_ModuleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00585}00585                         column: x => x.ModuleId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00586}00586                         principalTable: \textcolor{stringliteral}{"{}Module"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00587}00587                         principalColumn: \textcolor{stringliteral}{"{}ModuleId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00588}00588                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00589}00589                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00590}00590 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00591}00591             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00592}00592                 name: \textcolor{stringliteral}{"{}Screen"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00593}00593                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00594}00594                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00595}00595                     ScreenId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00596}00596                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00597}00597                     ModuleId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00598}00598                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00599}00599                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00600}00600                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00601}00601                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00602}00602                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00603}00603                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00604}00604                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00605}00605                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00606}00606                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00607}00607                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00608}00608                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00609}00609                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00610}00610                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00611}00611                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00612}00612                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00613}00613                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00614}00614                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00615}00615                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00616}00616                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Screen"{}}, x => x.ScreenId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00617}00617                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00618}00618                         name: \textcolor{stringliteral}{"{}FK\_Screen\_Module\_ModuleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00619}00619                         column: x => x.ModuleId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00620}00620                         principalTable: \textcolor{stringliteral}{"{}Module"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00621}00621                         principalColumn: \textcolor{stringliteral}{"{}ModuleId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00622}00622                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00623}00623                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00624}00624 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00625}00625             migrationBuilder.CreateTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00626}00626                 name: \textcolor{stringliteral}{"{}Subdepartment"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00627}00627                 columns: table => \textcolor{keyword}{new}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00628}00628                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00629}00629                     SubdepartmentId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00630}00630                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00631}00631                     DepartmentId = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(255)"{}}, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00632}00632                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00633}00633                     Name = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00634}00634                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00635}00635                     Code = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(30)"{}}, maxLength: 30, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00636}00636                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00637}00637                     Description = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(500)"{}}, maxLength: 500, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00638}00638                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00639}00639                     CreateBy = table.Column<\textcolor{keywordtype}{string}>(type: \textcolor{stringliteral}{"{}varchar(100)"{}}, maxLength: 100, nullable: \textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00640}00640                         .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00641}00641                     UpdateBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00642}00642                     DeleteBy = table.Column<\textcolor{keywordtype}{int}>(type: \textcolor{stringliteral}{"{}int"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00643}00643                     CreateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}NOW()"{}}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00644}00644                     DTUpdateDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00645}00645                     DeleteDate = table.Column<DateTime>(type: \textcolor{stringliteral}{"{}datetime(6)"{}}, nullable: \textcolor{keyword}{true}),}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00646}00646                     Active = table.Column<\textcolor{keywordtype}{bool}>(type: \textcolor{stringliteral}{"{}tinyint(1)"{}}, nullable: \textcolor{keyword}{false}, defaultValueSql: \textcolor{stringliteral}{"{}1"{}})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00647}00647                 \},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00648}00648                 constraints: table =>}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00649}00649                 \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00650}00650                     table.PrimaryKey(\textcolor{stringliteral}{"{}PK\_Subdepartment"{}}, x => x.SubdepartmentId);}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00651}00651                     table.ForeignKey(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00652}00652                         name: \textcolor{stringliteral}{"{}FK\_Subdepartment\_Department\_DepartmentId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00653}00653                         column: x => x.DepartmentId,}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00654}00654                         principalTable: \textcolor{stringliteral}{"{}Department"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00655}00655                         principalColumn: \textcolor{stringliteral}{"{}DepartmentId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00656}00656                 \})}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00657}00657                 .Annotation(\textcolor{stringliteral}{"{}MySql:CharSet"{}}, \textcolor{stringliteral}{"{}utf8mb4"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00658}00658 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00659}00659             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00660}00660                 name: \textcolor{stringliteral}{"{}IX\_AspNetRoleClaims\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00661}00661                 table: \textcolor{stringliteral}{"{}AspNetRoleClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00662}00662                 column: \textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00663}00663 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00664}00664             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00665}00665                 name: \textcolor{stringliteral}{"{}RoleNameIndex"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00666}00666                 table: \textcolor{stringliteral}{"{}AspNetRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00667}00667                 column: \textcolor{stringliteral}{"{}NormalizedName"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00668}00668                 unique: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00669}00669 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00670}00670             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00671}00671                 name: \textcolor{stringliteral}{"{}IX\_AspNetUserClaims\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00672}00672                 table: \textcolor{stringliteral}{"{}AspNetUserClaims"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00673}00673                 column: \textcolor{stringliteral}{"{}UserId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00674}00674 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00675}00675             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00676}00676                 name: \textcolor{stringliteral}{"{}IX\_AspNetUserLogins\_UserId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00677}00677                 table: \textcolor{stringliteral}{"{}AspNetUserLogins"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00678}00678                 column: \textcolor{stringliteral}{"{}UserId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00679}00679 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00680}00680             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00681}00681                 name: \textcolor{stringliteral}{"{}IX\_AspNetUserRoles\_RoleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00682}00682                 table: \textcolor{stringliteral}{"{}AspNetUserRoles"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00683}00683                 column: \textcolor{stringliteral}{"{}RoleId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00684}00684 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00685}00685             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00686}00686                 name: \textcolor{stringliteral}{"{}EmailIndex"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00687}00687                 table: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00688}00688                 column: \textcolor{stringliteral}{"{}NormalizedEmail"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00689}00689 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00690}00690             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00691}00691                 name: \textcolor{stringliteral}{"{}UserNameIndex"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00692}00692                 table: \textcolor{stringliteral}{"{}AspNetUsers"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00693}00693                 column: \textcolor{stringliteral}{"{}NormalizedUserName"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00694}00694                 unique: \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00695}00695 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00696}00696             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00697}00697                 name: \textcolor{stringliteral}{"{}IX\_Contact\_ProjectId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00698}00698                 table: \textcolor{stringliteral}{"{}Contact"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00699}00699                 column: \textcolor{stringliteral}{"{}ProjectId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00700}00700 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00701}00701             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00702}00702                 name: \textcolor{stringliteral}{"{}IX\_ContactLocal\_LocalsLocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00703}00703                 table: \textcolor{stringliteral}{"{}ContactLocal"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00704}00704                 column: \textcolor{stringliteral}{"{}LocalsLocalId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00705}00705 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00706}00706             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00707}00707                 name: \textcolor{stringliteral}{"{}IX\_Department\_ModuleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00708}00708                 table: \textcolor{stringliteral}{"{}Department"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00709}00709                 column: \textcolor{stringliteral}{"{}ModuleId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00710}00710 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00711}00711             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00712}00712                 name: \textcolor{stringliteral}{"{}IX\_Level\_ContactId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00713}00713                 table: \textcolor{stringliteral}{"{}Level"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00714}00714                 column: \textcolor{stringliteral}{"{}ContactId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00715}00715 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00716}00716             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00717}00717                 name: \textcolor{stringliteral}{"{}IX\_Level\_ProjectId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00718}00718                 table: \textcolor{stringliteral}{"{}Level"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00719}00719                 column: \textcolor{stringliteral}{"{}ProjectId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00720}00720 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00721}00721             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00722}00722                 name: \textcolor{stringliteral}{"{}IX\_Local\_LevelId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00723}00723                 table: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00724}00724                 column: \textcolor{stringliteral}{"{}LevelId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00725}00725 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00726}00726             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00727}00727                 name: \textcolor{stringliteral}{"{}IX\_Local\_StatusId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00728}00728                 table: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00729}00729                 column: \textcolor{stringliteral}{"{}StatusId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00730}00730 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00731}00731             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00732}00732                 name: \textcolor{stringliteral}{"{}IX\_Local\_TypeId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00733}00733                 table: \textcolor{stringliteral}{"{}Local"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00734}00734                 column: \textcolor{stringliteral}{"{}TypeId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00735}00735 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00736}00736             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00737}00737                 name: \textcolor{stringliteral}{"{}IX\_Module\_LevelId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00738}00738                 table: \textcolor{stringliteral}{"{}Module"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00739}00739                 column: \textcolor{stringliteral}{"{}LevelId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00740}00740 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00741}00741             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00742}00742                 name: \textcolor{stringliteral}{"{}IX\_Module\_LocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00743}00743                 table: \textcolor{stringliteral}{"{}Module"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00744}00744                 column: \textcolor{stringliteral}{"{}LocalId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00745}00745 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00746}00746             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00747}00747                 name: \textcolor{stringliteral}{"{}IX\_Screen\_ModuleId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00748}00748                 table: \textcolor{stringliteral}{"{}Screen"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00749}00749                 column: \textcolor{stringliteral}{"{}ModuleId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00750}00750 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00751}00751             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00752}00752                 name: \textcolor{stringliteral}{"{}IX\_Subdepartment\_DepartmentId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00753}00753                 table: \textcolor{stringliteral}{"{}Subdepartment"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00754}00754                 column: \textcolor{stringliteral}{"{}DepartmentId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00755}00755 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00756}00756             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00757}00757                 name: \textcolor{stringliteral}{"{}IX\_Visit\_Id"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00758}00758                 table: \textcolor{stringliteral}{"{}Visit"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00759}00759                 column: \textcolor{stringliteral}{"{}Id"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00760}00760 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00761}00761             migrationBuilder.CreateIndex(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00762}00762                 name: \textcolor{stringliteral}{"{}IX\_Visit\_LocalId"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00763}00763                 table: \textcolor{stringliteral}{"{}Visit"{}},}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00764}00764                 column: \textcolor{stringliteral}{"{}LocalId"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00765}00765         \}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00766}00766 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00767}\mbox{\hyperlink{classterravital__admin__edificios_1_1_dal_1_1_migrations_1_1_initial_create_afc05796afb3a0677c2d84a987ad6516a}{00767}}         \textcolor{keyword}{protected} \textcolor{keyword}{override} \textcolor{keywordtype}{void} \mbox{\hyperlink{classterravital__admin__edificios_1_1_dal_1_1_migrations_1_1_initial_create_afc05796afb3a0677c2d84a987ad6516a}{Down}}(MigrationBuilder migrationBuilder)}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00768}00768         \{}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00769}00769             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00770}00770                 name: \textcolor{stringliteral}{"{}AspNetRoleClaims"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00771}00771 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00772}00772             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00773}00773                 name: \textcolor{stringliteral}{"{}AspNetUserClaims"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00774}00774 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00775}00775             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00776}00776                 name: \textcolor{stringliteral}{"{}AspNetUserLogins"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00777}00777 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00778}00778             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00779}00779                 name: \textcolor{stringliteral}{"{}AspNetUserRoles"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00780}00780 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00781}00781             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00782}00782                 name: \textcolor{stringliteral}{"{}AspNetUserTokens"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00783}00783 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00784}00784             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00785}00785                 name: \textcolor{stringliteral}{"{}ContactLocal"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00786}00786 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00787}00787             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00788}00788                 name: \textcolor{stringliteral}{"{}Screen"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00789}00789 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00790}00790             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00791}00791                 name: \textcolor{stringliteral}{"{}Subdepartment"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00792}00792 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00793}00793             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00794}00794                 name: \textcolor{stringliteral}{"{}Visit"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00795}00795 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00796}00796             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00797}00797                 name: \textcolor{stringliteral}{"{}AspNetRoles"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00798}00798 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00799}00799             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00800}00800                 name: \textcolor{stringliteral}{"{}Department"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00801}00801 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00802}00802             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00803}00803                 name: \textcolor{stringliteral}{"{}AspNetUsers"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00804}00804 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00805}00805             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00806}00806                 name: \textcolor{stringliteral}{"{}Module"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00807}00807 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00808}00808             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00809}00809                 name: \textcolor{stringliteral}{"{}Local"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00810}00810 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00811}00811             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00812}00812                 name: \textcolor{stringliteral}{"{}Level"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00813}00813 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00814}00814             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00815}00815                 name: \textcolor{stringliteral}{"{}LocalStatus"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00816}00816 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00817}00817             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00818}00818                 name: \textcolor{stringliteral}{"{}LocalType"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00819}00819 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00820}00820             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00821}00821                 name: \textcolor{stringliteral}{"{}Contact"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00822}00822 }
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00823}00823             migrationBuilder.DropTable(}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00824}00824                 name: \textcolor{stringliteral}{"{}Project"{}});}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00825}00825         \}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00826}00826     \}}
+\DoxyCodeLine{\Hypertarget{20220426164750___initial_create_8cs_source_l00827}00827 \}}
+
+\end{DoxyCode}

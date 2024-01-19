@@ -1,0 +1,115 @@
+\hypertarget{_program_8cs_source}{}\doxysection{Program.\+cs}
+\label{_program_8cs_source}\index{terravital-\/admin-\/edificios-\/webapi/Program.cs@{terravital-\/admin-\/edificios-\/webapi/Program.cs}}
+\mbox{\hyperlink{_program_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00001}00001 \textcolor{keyword}{using} \mbox{\hyperlink{namespacebackend__api__lmi}{backend\_api\_lmi}}.\mbox{\hyperlink{namespacebackend__api__lmi_1_1_services}{Services}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Builder;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.Extensions.Hosting;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1commons}{commons}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_dal}{Dal}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_dal_1_1_http}{Http}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Hosting;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00007}00007 \textcolor{keyword}{using} Serilog;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00008}00008 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00009}00009 \textcolor{keyword}{using} Serilog.Events;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00010}00010 \textcolor{keyword}{using} Microsoft.AspNetCore.Http;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00011}00011 \textcolor{keyword}{using} Microsoft.Extensions.DependencyInjection;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00012}00012 \textcolor{keyword}{using} Microsoft.AspNetCore.Authentication.JwtBearer;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00013}00013 \textcolor{keyword}{using} Microsoft.IdentityModel.Tokens;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00014}00014 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00015}00015 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios__webapi}{terravital\_admin\_edificios\_webapi}};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00017}\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{00017}} var \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}} = WebApplication.CreateBuilder(args);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00019}\mbox{\hyperlink{_program_8cs_a76e75308615edefdde24a28ec2ad757f}{00019}} \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Host.UseSerilog((ctx, lc) => lc}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00020}00020       .WriteTo}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00021}00021       .MySQL(}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00022}00022         connectionString: Environment.GetEnvironmentVariable(\textcolor{stringliteral}{"{}TERRAVITAL\_CONN"{}}),}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00023}00023         \textcolor{stringliteral}{"{}Log\_System"{}},}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00024}00024         restrictedToMinimumLevel: LogEventLevel.Information)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00025}00025     .Enrich.FromLogContext());}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00027}00027 \textcolor{comment}{//builder.Host.UseSerilog((ctx, lc) => lc}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00028}00028 \textcolor{comment}{//      .WriteTo}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00029}00029 \textcolor{comment}{//      .MySQL(}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00030}00030 \textcolor{comment}{//        connectionString: "{}Server=terrravital-\/devqa-\/mysql.cyjcsu73z8f7.us-\/west-\/2.rds.amazonaws.com;Port=3306;Database=tva\_bd\_dev;Uid=terramaster;Pwd=VFz2g6JkmBPcKUwt;"{},}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00031}00031 \textcolor{comment}{//        "{}Log\_System"{},}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00032}00032 \textcolor{comment}{//        restrictedToMinimumLevel: LogEventLevel.Information)}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00033}00033 \textcolor{comment}{//    .Enrich.FromLogContext());}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00035}\mbox{\hyperlink{_program_8cs_a1a35fc500777f5a6b0a679e9ff25e4e9}{00035}} \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddInfrastructure();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00037}\mbox{\hyperlink{_program_8cs_a8d1db2bf97797f0326f61c200e5a8c64}{00037}} \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddAuthentication(options => \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00038}00038     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme; \textcolor{comment}{// "{}Bearer"{}}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00039}00039     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00040}00040 \}).AddJwtBearer(options => \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00041}00041     options.TokenValidationParameters = \textcolor{keyword}{new} TokenValidationParameters}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00042}00042     \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00043}00043         ValidateIssuerSigningKey = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00044}00044         ValidateIssuer = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00045}00045         ValidateAudience = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00046}00046         ValidateLifetime = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00047}00047         ClockSkew = TimeSpan.Zero,}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00048}00048         ValidIssuer = \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Configuration[\textcolor{stringliteral}{"{}JwtSettings:Issuer"{}}],}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00049}00049         ValidAudience = \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Configuration[\textcolor{stringliteral}{"{}JwtSettings:Audience"{}}],}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00050}00050         IssuerSigningKey = \textcolor{keyword}{new} SymmetricSecurityKey(Encoding.UTF8.GetBytes(\mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Configuration[\textcolor{stringliteral}{"{}JwtSettings:Key"{}}]))}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00051}00051     \};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00052}00052 \});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00054}\mbox{\hyperlink{_program_8cs_a8a79269e7805cb7a57ada9aa4808d963}{00054}} \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Services.AddResponseCaching(options =>}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00055}00055 \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00056}00056     options.MaximumBodySize = 1024;}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00057}00057     options.UseCaseSensitivePaths = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00058}00058 \});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00060}\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{00060}} var \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}} = \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Build();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00062}\mbox{\hyperlink{_program_8cs_a79a944c7f0e25196ca3c5a8638b919b9}{00062}} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsDevelopment())}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00063}00063 \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00064}00064     \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwagger();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00065}00065     \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwaggerUI(c => c.SwaggerEndpoint(\textcolor{stringliteral}{"{}/swagger/v1/swagger.json"{}}, \textcolor{stringliteral}{"{}TVA\_API v1 Development"{}}));}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00067}00067 \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00068}\mbox{\hyperlink{_program_8cs_a00213b29ae29be44310f4f758c6b317b}{00068}} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsEnvironment(\textcolor{stringliteral}{"{}QA"{}}))}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00070}00070     \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwagger();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00071}00071     \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwaggerUI(c => c.SwaggerEndpoint(\textcolor{stringliteral}{"{}/swagger/v1/swagger.json"{}}, \textcolor{stringliteral}{"{}TVA\_API v1 QA"{}}));}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00073}\mbox{\hyperlink{_program_8cs_a1a5c44257f2c561cfd1cd93d7ad5980f}{00073}} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Environment.IsEnvironment(\textcolor{stringliteral}{"{}Production"{}}))}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00074}00074 \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00075}00075     \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwagger();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00076}00076     \textcolor{comment}{//app.UseSwaggerUI();}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00077}00077     \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseSwaggerUI(c => c.SwaggerEndpoint(\textcolor{stringliteral}{"{}/swagger/v1/swagger.json"{}}, \textcolor{stringliteral}{"{}TVA\_API v1 Production"{}}));}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00078}00078 \}}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00080}\mbox{\hyperlink{_program_8cs_a93b74b9fe0044b8bf58cbab841c4f416}{00080}} \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_services}{BaseServices}}.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_services_a0fd424e3122c6aeb7103ee22372cb189}{Register}}(\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Services);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00081}00081 HttpServiceContext.Register(\mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Services);}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00083}\mbox{\hyperlink{_program_8cs_ad079bef961545b4473939a559e146e92}{00083}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseMiddleware<\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_exception_middleware}{ExceptionMiddleware}}>();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00085}\mbox{\hyperlink{_program_8cs_aa4d447fc3129a3aa301d736b8bd04ae9}{00085}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseHttpsRedirection();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00087}\mbox{\hyperlink{_program_8cs_adfcad7d2e6cbf2e6372bbe0f9fa96231}{00087}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseCors(\textcolor{stringliteral}{"{}AllowAll"{}});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00089}\mbox{\hyperlink{_program_8cs_ad1dd2821bf8ea32b65c5c188aec3e668}{00089}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Use(async (context, next) =>}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00090}00090 \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00091}00091     context.Response.GetTypedHeaders().CacheControl =}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00092}00092         \textcolor{keyword}{new} Microsoft.Net.Http.Headers.CacheControlHeaderValue()}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00093}00093         \{}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00094}00094             Public = \textcolor{keyword}{true},}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00095}00095             MaxAge = TimeSpan.FromSeconds(10)}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00096}00096         \};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00097}00097     context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.Vary] =}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00098}00098         \textcolor{keyword}{new} \textcolor{keywordtype}{string}[] \{ \textcolor{stringliteral}{"{}Accept-\/Encoding"{}} \};}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00100}00100     await next();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00101}00101 \});}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00103}\mbox{\hyperlink{_program_8cs_a6435d8beeff4999dc0b0c6d60a86a4e2}{00103}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseAuthentication();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00105}\mbox{\hyperlink{_program_8cs_af6f72d752b2e73aa0292f74bd13237ab}{00105}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.UseAuthorization();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00107}\mbox{\hyperlink{_program_8cs_a9e2ee3170aa6279b68eefd1651f7d96c}{00107}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.MapControllers();}
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{_program_8cs_source_l00109}\mbox{\hyperlink{_program_8cs_aaa3dbf02e269c3ef7e8546d290c6b3dd}{00109}} \mbox{\hyperlink{_program_8cs_a7b225fcb720e4d5ed2bbf60e28a25e6d}{app}}.Run();}
+
+\end{DoxyCode}

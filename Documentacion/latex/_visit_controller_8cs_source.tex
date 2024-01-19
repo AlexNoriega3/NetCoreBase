@@ -1,0 +1,57 @@
+\hypertarget{_visit_controller_8cs_source}{}\doxysection{Visit\+Controller.\+cs}
+\label{_visit_controller_8cs_source}\index{terravital-\/admin-\/edificios-\/webapi/Controllers/VisitController.cs@{terravital-\/admin-\/edificios-\/webapi/Controllers/VisitController.cs}}
+\mbox{\hyperlink{_visit_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.ModelBinding;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} Microsoft.AspNetCore.OData.Query;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00007}00007 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}};}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00008}00008 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00010}00010 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios__webapi_1_1_controllers}{terravital\_admin\_edificios\_webapi.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00012}00012     [Route(\textcolor{stringliteral}{"{}api/[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00013}00013     [ApiController]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00014}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller}{VisitController}} : ControllerBase}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00016}00016         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_visit_bll}{IVisitBll}} \_visitBll;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00018}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_adf75482fdd0029ff23e6ac0cb330c5d2}{00018}}         \textcolor{keyword}{public} \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_adf75482fdd0029ff23e6ac0cb330c5d2}{VisitController}}(\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_visit_bll}{IVisitBll}} visit)}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00019}00019         => this.\_visitBll = visit;}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00020}00020         }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00021}00021         [HttpGet]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00022}00022         [EnableQuery]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00023}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_acf6b6c0a9c564bc4d0457f567a2c8e13}{00023}}         \textcolor{keyword}{public} async Task<ActionResult<IEnumerable<VisitDto>>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_acf6b6c0a9c564bc4d0457f567a2c8e13}{Get}}()}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00024}00024          => await this.\_visitBll.Get();}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00027}00027         [HttpGet(\textcolor{stringliteral}{"{}GetAll"{}})]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00028}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a8c91274c42d1ec2df3d76fe0db4303bf}{00028}}         \textcolor{keyword}{public} async Task<ActionResult<PagedResult<VisitDto>>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a8c91274c42d1ec2df3d76fe0db4303bf}{GetVisits}}([FromQuery] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_query_parameters}{QueryParameters}} queryParameters)}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00029}00029         \textcolor{comment}{//\{}}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00030}00030         \textcolor{comment}{//    var pagedVisitsResult = await \_visitBll.GetAllAsync(queryParameters);}}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00031}00031         \textcolor{comment}{//    return Ok(pagedVisitsResult);}}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00032}00032         \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00033}00033         => await this.\_visitBll.GetAllAsync(queryParameters);}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00035}00035         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00036}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a8fdeddccdbaa9252c0b48bf7335c4384}{00036}}         \textcolor{keyword}{public} async Task<ActionResult<string>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a8fdeddccdbaa9252c0b48bf7335c4384}{Post}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_visit_dto}{VisitDto}} visit) =>}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00037}00037           await this.\_visitBll.Add(visit);}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00039}00039         [HttpGet(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00040}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a873060358176821dd523c3a736015ba9}{00040}}         \textcolor{keyword}{public} async Task<ActionResult<VisitDto>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a873060358176821dd523c3a736015ba9}{Get}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00041}00041             await this.\_visitBll.Get(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00043}00043         [HttpPut(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00044}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a6d5b05cb23861300db49e4c30683ab0a}{00044}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_a6d5b05cb23861300db49e4c30683ab0a}{Put}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, [BindRequired] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_visit_dto}{VisitDto}} edit) =>}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00045}00045            await this.\_visitBll.Edit(\textcolor{keywordtype}{id}, edit);}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00047}00047         [HttpDelete(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00048}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_ac0198e722860e905783d3993ce3d8461}{00048}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_visit_controller_ac0198e722860e905783d3993ce3d8461}{Delete}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00049}00049            await this.\_visitBll.Delete(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00050}00050     \}}
+\DoxyCodeLine{\Hypertarget{_visit_controller_8cs_source_l00051}00051 \}}
+
+\end{DoxyCode}

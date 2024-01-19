@@ -1,0 +1,4 @@
+var classterravital__admin__edificios_1_1_bll_1_1_factory_services_1_1_u_o_w_1_1_repositories_1_1_local_status_repository =
+[
+    [ "LocalStatusRepository", "classterravital__admin__edificios_1_1_bll_1_1_factory_services_1_1_u_o_w_1_1_repositories_1_1_local_status_repository.html#a0fa4f116ac809b840b972f12bce7d7d9", null ]
+];

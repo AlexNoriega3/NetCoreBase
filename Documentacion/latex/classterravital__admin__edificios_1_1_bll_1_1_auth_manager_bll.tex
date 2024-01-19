@@ -1,0 +1,105 @@
+\hypertarget{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}{}\doxysection{terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll Class Reference}
+\label{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}\index{terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}}
+Inheritance diagram for terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a1b6005c4ab8fc587e57f8d69520a7077}{Auth\+Manager\+Bll}} (IMapper mapper, User\+Manager$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_app_usuario}{App\+Usuario}} $>$ user\+Manager, IConfiguration configuration, ILogger$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}{Auth\+Manager\+Bll}} $>$ logger)
+\item 
+async Task$<$ string $>$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}{Create\+Refresh\+Token}} ()
+\item 
+async Task$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}} $>$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8751088e8451a4587281b8364f178fca}{Login}} (\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{Login\+Dto}} login\+Dto)
+\item 
+async Task$<$ IEnumerable$<$ Identity\+Error $>$ $>$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a9e11284a44999e2294b8db6894834570}{Register}} (\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{Api\+User\+Dto}} user\+Dto)
+\item 
+async Task$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}} $>$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8b7a9a05e1a39b768d84c8abf12610bf}{Verify\+Refresh\+Token}} (\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}} request)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_auth_manager_bll_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_auth_manager_bll_8cs_source}{Auth\+Manager\+Bll.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a1b6005c4ab8fc587e57f8d69520a7077}\label{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a1b6005c4ab8fc587e57f8d69520a7077}} 
+\index{terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}!AuthManagerBll@{AuthManagerBll}}
+\index{AuthManagerBll@{AuthManagerBll}!terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}}
+\doxysubsubsection{\texorpdfstring{AuthManagerBll()}{AuthManagerBll()}}
+{\footnotesize\ttfamily terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll.\+Auth\+Manager\+Bll (\begin{DoxyParamCaption}\item[{IMapper}]{mapper,  }\item[{User\+Manager$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_app_usuario}{App\+Usuario}} $>$}]{user\+Manager,  }\item[{IConfiguration}]{configuration,  }\item[{ILogger$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}{Auth\+Manager\+Bll}} $>$}]{logger }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_auth_manager_bll_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_auth_manager_bll_8cs_source}{Auth\+Manager\+Bll.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}\label{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}} 
+\index{terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}!CreateRefreshToken@{CreateRefreshToken}}
+\index{CreateRefreshToken@{CreateRefreshToken}!terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}}
+\doxysubsubsection{\texorpdfstring{CreateRefreshToken()}{CreateRefreshToken()}}
+{\footnotesize\ttfamily async Task$<$ string $>$ terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll.\+Create\+Refresh\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_a11a3549354ca5a16286bea7d0343432c}{terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Interfaces.\+IAuth\+Manager}}.
+
+
+
+Definition at line \mbox{\hyperlink{_auth_manager_bll_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_auth_manager_bll_8cs_source}{Auth\+Manager\+Bll.\+cs}}.
+
+\mbox{\Hypertarget{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8751088e8451a4587281b8364f178fca}\label{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8751088e8451a4587281b8364f178fca}} 
+\index{terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}!Login@{Login}}
+\index{Login@{Login}!terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}} $>$ terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll.\+Login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{Login\+Dto}}}]{login\+Dto }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_aea9351ed4ea1e6dfd37c4e82c34eea8c}{terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Interfaces.\+IAuth\+Manager}}.
+
+
+
+Definition at line \mbox{\hyperlink{_auth_manager_bll_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_auth_manager_bll_8cs_source}{Auth\+Manager\+Bll.\+cs}}.
+
+\mbox{\Hypertarget{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a9e11284a44999e2294b8db6894834570}\label{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a9e11284a44999e2294b8db6894834570}} 
+\index{terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}!Register@{Register}}
+\index{Register@{Register}!terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily async Task$<$ IEnumerable$<$ Identity\+Error $>$ $>$ terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll.\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{Api\+User\+Dto}}}]{user\+Dto }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_adf229eb1751c2105a01d86da157b0b0e}{terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Interfaces.\+IAuth\+Manager}}.
+
+
+
+Definition at line \mbox{\hyperlink{_auth_manager_bll_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_auth_manager_bll_8cs_source}{Auth\+Manager\+Bll.\+cs}}.
+
+\mbox{\Hypertarget{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8b7a9a05e1a39b768d84c8abf12610bf}\label{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8b7a9a05e1a39b768d84c8abf12610bf}} 
+\index{terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}!VerifyRefreshToken@{VerifyRefreshToken}}
+\index{VerifyRefreshToken@{VerifyRefreshToken}!terravital\_admin\_edificios.Bll.AuthManagerBll@{terravital\_admin\_edificios.Bll.AuthManagerBll}}
+\doxysubsubsection{\texorpdfstring{VerifyRefreshToken()}{VerifyRefreshToken()}}
+{\footnotesize\ttfamily async Task$<$ \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}} $>$ terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Auth\+Manager\+Bll.\+Verify\+Refresh\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}}}]{request }\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_aea8d8160f394cd03662baceff55916da}{terravital\+\_\+admin\+\_\+edificios.\+Bll.\+Interfaces.\+IAuth\+Manager}}.
+
+
+
+Definition at line \mbox{\hyperlink{_auth_manager_bll_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_auth_manager_bll_8cs_source}{Auth\+Manager\+Bll.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+terravital-\/admin-\/edificios.\+Bll/\mbox{\hyperlink{_auth_manager_bll_8cs}{Auth\+Manager\+Bll.\+cs}}\end{DoxyCompactItemize}

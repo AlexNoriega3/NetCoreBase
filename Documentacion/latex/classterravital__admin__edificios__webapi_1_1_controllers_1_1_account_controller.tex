@@ -1,0 +1,128 @@
+\hypertarget{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}{}\doxysection{terravital\+\_\+admin\+\_\+edificios\+\_\+webapi.\+Controllers.\+Account\+Controller Class Reference}
+\label{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}\index{terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}}
+Inheritance diagram for terravital\+\_\+admin\+\_\+edificios\+\_\+webapi.\+Controllers.\+Account\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ab668ca0aa7cf03436d6c578a2d5d1513}{Account\+Controller}} (\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{IAuth\+Manager}} auth\+Manager, ILogger$<$ \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}{Account\+Controller}} $>$ logger)
+\item 
+async Task$<$ Action\+Result $>$ \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a640097aab1ae8a8286b0eccb53b9c2f4}{Register}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{Api\+User\+Dto}} api\+User\+Dto)
+\begin{DoxyCompactList}\small\item\em Endpoint para el registro de los usuarios \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result $>$ \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ae7c0911a86ce9f8e3bd41a3c2d4eaa8c}{Login}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{Login\+Dto}} login\+Dto)
+\begin{DoxyCompactList}\small\item\em Endpoint para realizar el login del usuario de los usuarios \end{DoxyCompactList}\item 
+async Task$<$ Action\+Result $>$ \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a3b4d0187d2d20bf2a8f8d9794f4c82f1}{Refresh\+Token}} (\mbox{[}From\+Body\mbox{]} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}} request)
+\begin{DoxyCompactList}\small\item\em Endpoint para realizar el login del usuario de los usuarios \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_account_controller_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_account_controller_8cs_source}{Account\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ab668ca0aa7cf03436d6c578a2d5d1513}\label{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ab668ca0aa7cf03436d6c578a2d5d1513}} 
+\index{terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}!AccountController@{AccountController}}
+\index{AccountController@{AccountController}!terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{AccountController()}{AccountController()}}
+{\footnotesize\ttfamily terravital\+\_\+admin\+\_\+edificios\+\_\+webapi.\+Controllers.\+Account\+Controller.\+Account\+Controller (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{IAuth\+Manager}}}]{auth\+Manager,  }\item[{ILogger$<$ \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}{Account\+Controller}} $>$}]{logger }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_account_controller_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_account_controller_8cs_source}{Account\+Controller.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ae7c0911a86ce9f8e3bd41a3c2d4eaa8c}\label{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ae7c0911a86ce9f8e3bd41a3c2d4eaa8c}} 
+\index{terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}!Login@{Login}}
+\index{Login@{Login}!terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Login()}{Login()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result $>$ terravital\+\_\+admin\+\_\+edificios\+\_\+webapi.\+Controllers.\+Account\+Controller.\+Login (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{Login\+Dto}}}]{login\+Dto }\end{DoxyParamCaption})}
+
+
+
+Endpoint para realizar el login del usuario de los usuarios 
+
+Sample request\+:
+
+GET api/\+Account/\+Login
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & Description here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Description here
+\end{DoxyReturn}
+$<$response code=\char`\"{}200\char`\"{}$>$Description here$<$/response$>$ $<$response code=\char`\"{}400\char`\"{}$>$Description here$<$/response$>$ ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_account_controller_8cs_source_l00088}{88}} of file \mbox{\hyperlink{_account_controller_8cs_source}{Account\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a3b4d0187d2d20bf2a8f8d9794f4c82f1}\label{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a3b4d0187d2d20bf2a8f8d9794f4c82f1}} 
+\index{terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}!RefreshToken@{RefreshToken}}
+\index{RefreshToken@{RefreshToken}!terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{RefreshToken()}{RefreshToken()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result $>$ terravital\+\_\+admin\+\_\+edificios\+\_\+webapi.\+Controllers.\+Account\+Controller.\+Refresh\+Token (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{Auth\+Response\+Dto}}}]{request }\end{DoxyParamCaption})}
+
+
+
+Endpoint para realizar el login del usuario de los usuarios 
+
+Sample request\+:
+
+GET api/\+Account/\+Login
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & Description here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Description here
+\end{DoxyReturn}
+$<$response code=\char`\"{}200\char`\"{}$>$Description here$<$/response$>$ $<$response code=\char`\"{}400\char`\"{}$>$Description here$<$/response$>$ ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_account_controller_8cs_source_l00119}{119}} of file \mbox{\hyperlink{_account_controller_8cs_source}{Account\+Controller.\+cs}}.
+
+\mbox{\Hypertarget{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a640097aab1ae8a8286b0eccb53b9c2f4}\label{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a640097aab1ae8a8286b0eccb53b9c2f4}} 
+\index{terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}!Register@{Register}}
+\index{Register@{Register}!terravital\_admin\_edificios\_webapi.Controllers.AccountController@{terravital\_admin\_edificios\_webapi.Controllers.AccountController}}
+\doxysubsubsection{\texorpdfstring{Register()}{Register()}}
+{\footnotesize\ttfamily async Task$<$ Action\+Result $>$ terravital\+\_\+admin\+\_\+edificios\+\_\+webapi.\+Controllers.\+Account\+Controller.\+Register (\begin{DoxyParamCaption}\item[{\mbox{[}\+From\+Body\mbox{]} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{Api\+User\+Dto}}}]{api\+User\+Dto }\end{DoxyParamCaption})}
+
+
+
+Endpoint para el registro de los usuarios 
+
+Sample request\+:
+
+GET api/\+Account/\+Registrar
+
+
+\begin{DoxyParams}{Parameters}
+{\em filter} & Description here\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Description here
+\end{DoxyReturn}
+$<$response code=\char`\"{}200\char`\"{}$>$Description here$<$/response$>$ $<$response code=\char`\"{}400\char`\"{}$>$Description here$<$/response$>$ ~\newline
+ 
+
+Definition at line \mbox{\hyperlink{_account_controller_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_account_controller_8cs_source}{Account\+Controller.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+terravital-\/admin-\/edificios-\/webapi/\+Controllers/\mbox{\hyperlink{_account_controller_8cs}{Account\+Controller.\+cs}}\end{DoxyCompactItemize}

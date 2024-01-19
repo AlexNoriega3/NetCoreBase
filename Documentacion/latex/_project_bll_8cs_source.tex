@@ -1,0 +1,132 @@
+\hypertarget{_project_bll_8cs_source}{}\doxysection{Project\+Bll.\+cs}
+\label{_project_bll_8cs_source}\index{terravital-\/admin-\/edificios.Bll/ProjectBll.cs@{terravital-\/admin-\/edificios.Bll/ProjectBll.cs}}
+\mbox{\hyperlink{_project_bll_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00002}00002 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1commons}{commons}};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00003}00003 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00004}00004 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_entities}{Entities}};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00007}00007 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{terravital\_admin\_edificios.Bll}}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00008}00008 \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00009}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll}{00009}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll}{ProjectBll}} : \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll}{BaseBll}}, \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_project_bll}{IProjectBll}}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00010}00010     \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00011}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_a8eb6780b632bf2e4c63e847dca1c8d6a}{00011}}         \textcolor{keyword}{public} async Task<ActionResult<IEnumerable<ProjectDto>>> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_a8eb6780b632bf2e4c63e847dca1c8d6a}{Get}}()}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00012}00012         \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00013}00013             IEnumerable<ProjectDto> projects = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00015}00015             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00016}00016             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00017}00017                 IEnumerable<Project> projectsEntity = await this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00018}00018                     .GetAllAsync();}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00020}00020                 projects = this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a306657b20c625a47c8a7c6be35f4a76e}{\_mapper}}.Map<IEnumerable<ProjectDto>>(projectsEntity);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00021}00021             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00022}00022             \textcolor{keywordflow}{catch} (Exception e)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00023}00023             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00024}00024                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_ac5ce66aaa67daff727a2f4c9d9c0e287}{\_logger}}.Error(e, e.Message);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00025}00025                 \textcolor{keywordflow}{return} BadRequest(\textcolor{stringliteral}{"{}Server error to load projects"{}});}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00026}00026             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00028}00028             \textcolor{keywordflow}{return} Ok(projects);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00029}00029         \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00031}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_adac46a974ee0787d8e63e3af48deba1f}{00031}}         \textcolor{keyword}{public} async Task<ActionResult<ProjectDto>> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_adac46a974ee0787d8e63e3af48deba1f}{Get}}(\textcolor{keywordtype}{string} projectId)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00033}00033             \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_project_dto}{ProjectDto}} project = \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00035}00035             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00036}00036             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00037}00037                 \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_project}{Project}} projectsEntity = this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00038}00038                     .FindBy(p => p.ProjectId == projectId)?}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00039}00039                     .FirstOrDefault();               }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00041}00041                 project = this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a306657b20c625a47c8a7c6be35f4a76e}{\_mapper}}.Map<\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_project_dto}{ProjectDto}}>(projectsEntity);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00043}00043             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00044}00044             \textcolor{keywordflow}{catch} (Exception e)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00045}00045             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00046}00046                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_ac5ce66aaa67daff727a2f4c9d9c0e287}{\_logger}}.Error(e, e.Message);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00047}00047                 \textcolor{keywordflow}{return} BadRequest(\textcolor{stringliteral}{"{}Server error to get project"{}});}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00048}00048             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00050}00050             \textcolor{keywordflow}{return} Ok(project);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00051}00051         \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00053}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_aca29409b2a2048a6cc342440d2b0b327}{00053}}         \textcolor{keyword}{public} async Task<ActionResult<string>> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_aca29409b2a2048a6cc342440d2b0b327}{Add}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_project_dto}{ProjectDto}} project)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00055}00055             \textcolor{keywordtype}{string} projectId = \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00057}00057             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00058}00058             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00059}00059                 \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_project}{Project}} projectEntity = this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a306657b20c625a47c8a7c6be35f4a76e}{\_mapper}}.Map<\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_project}{Project}}>(project);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00060}00060                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository.Add(projectEntity);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00061}00061                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.Save();}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00063}00063                 projectId = projectEntity.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_project_a8f9a35a842bc79895d0d6b51c433b62c}{ProjectId}};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00064}00064             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00065}00065             \textcolor{keywordflow}{catch} (Exception e)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00066}00066             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00067}00067                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_ac5ce66aaa67daff727a2f4c9d9c0e287}{\_logger}}.Error(e, e.Message);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00068}00068                 \textcolor{keywordflow}{return} BadRequest(\textcolor{stringliteral}{"{}Server error to add an project"{}});}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00069}00069             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00071}00071             \textcolor{keywordflow}{return} Ok(projectId);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00073}00073         \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00075}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_a8ab807447875df76c8f6388eb0b01a68}{00075}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_a8ab807447875df76c8f6388eb0b01a68}{Edit}}(\textcolor{keywordtype}{string} projectId, \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_project_dto}{ProjectDto}} edit)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00076}00076         \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00077}00077             \textcolor{keywordtype}{bool} success = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00079}00079             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00080}00080             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00081}00081                 \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_project}{Project}} projectEntity  = await this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00082}00082                     .FindTrackingAsync(p => p.ProjectId == projectId);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00084}00084                 \textcolor{keywordflow}{if}(projectEntity is \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00085}00085                 \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00086}00086                     \textcolor{keywordflow}{return} NotFound();}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00087}00087                 \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00089}00089                 projectEntity = this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a306657b20c625a47c8a7c6be35f4a76e}{\_mapper}}.Map(edit, projectEntity);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00091}00091                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository.Update(projectEntity, projectId);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00092}00092                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.Save();}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00093}00093                 success = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00094}00094             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00095}00095             \textcolor{keywordflow}{catch} (Exception e)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00096}00096             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00097}00097                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_ac5ce66aaa67daff727a2f4c9d9c0e287}{\_logger}}.Error(e, e.Message);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00098}00098                 \textcolor{keywordflow}{return} BadRequest(\textcolor{stringliteral}{"{}Server error to edit an project"{}});}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00099}00099             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00101}00101             \textcolor{keywordflow}{return} Ok(success);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00102}00102         \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00104}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_aab32063b2ca93995c24bda5e05b2a71c}{00104}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_project_bll_aab32063b2ca93995c24bda5e05b2a71c}{Delete}}(\textcolor{keywordtype}{string} projectId)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00105}00105         \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00106}00106             \textcolor{keywordtype}{bool} success = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00108}00108             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00109}00109             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00110}00110                 \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_project}{Project}} projectEntity = this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00111}00111                    .Find(p => p.ProjectId == projectId);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00113}00113                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.ProjectsRepository.Delete(projectEntity);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00114}00114                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_a18a6d1a1afedc344ef252a2e1a092393}{\_UOWTerraVital}}.Save();}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00115}00115                 success = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00116}00116             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00117}00117             \textcolor{keywordflow}{catch} (Exception e)}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00118}00118             \{}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00119}00119                 this.\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1commons_1_1_base_bll_ac5ce66aaa67daff727a2f4c9d9c0e287}{\_logger}}.Error(e, e.Message);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00120}00120                 \textcolor{keywordflow}{return} BadRequest(\textcolor{stringliteral}{"{}Server error to delete projects"{}});}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00121}00121             \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00123}00123             \textcolor{keywordflow}{return} Ok(success);}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00124}00124         \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00125}00125     \}}
+\DoxyCodeLine{\Hypertarget{_project_bll_8cs_source_l00126}00126 \}}
+
+\end{DoxyCode}

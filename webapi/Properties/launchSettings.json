@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:11365",
+      "sslPort": 44315
+    }
+  },
+  "profiles": {
+    "Production": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:37189;http://localhost:25541",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "DB_CONNECTION": "Server=SERVERNAME;Port=3306;Database=DBName;Uid=UserName;Pwd=PasswordValue; Allow User Variables=true",
+        "WEB_URL": "https://url"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "IISDevelopment",
+        "DB_CONNECTION": "Server=SERVERNAME;Port=3306;Database=DBName;Uid=UserName;Pwd=PasswordValue; Allow User Variables=true",
+        "WEB_URL": "https://url"
+      }
+    },
+    "Development": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:45083;http://localhost:42811",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_CONNECTION": "Server=SERVERNAME;Port=3306;Database=DBName;Uid=UserName;Pwd=PasswordValue; Allow User Variables=true",
+        "WEB_URL": "https://url"
+      }
+    },
+    "QA": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:45733;http://localhost:16363",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "QA",
+        "DB_CONNECTION": "Server=SERVERNAME;Port=3306;Database=DBName;Uid=UserName;Pwd=PasswordValue; Allow User Variables=true",
+        "WEB_URL": "https://url"
+      }
+    },
+    "Web.Api": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7048;http://localhost:5048",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "DB_CONNECTION": "Server=SERVERNAME;Port=3306;Database=DBName;Uid=UserName;Pwd=PasswordValue; Allow User Variables=true",
+        "WEB_URL": "https://url"
+      }
+    }
+  }
+}

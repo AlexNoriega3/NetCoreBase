@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Models</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TourmalineCore.AspNetCore.JwtAuthentication.Identity" Version="0.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Folder Include="DTOs\user\" />
+    <Folder Include="DTOs\commons\" />
+    <Folder Include="Login\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="DTOs\user\" />
+    <None Remove="DTOs\Visit\" />
+    <None Remove="DTOs\commons\" />
+    <None Remove="DTOs\Notifications\" />
+    <None Remove="DTOs\Rating\" />
+    <None Remove="DTOs\Schedules\" />
+    <None Remove="DTOs\Kiosko\" />
+    <None Remove="Newtonsoft.Json" />
+    <None Remove="Login\" />
+  </ItemGroup>
+</Project>

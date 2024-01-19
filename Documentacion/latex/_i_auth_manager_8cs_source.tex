@@ -1,0 +1,21 @@
+\hypertarget{_i_auth_manager_8cs_source}{}\doxysection{IAuth\+Manager.\+cs}
+\label{_i_auth_manager_8cs_source}\index{terravital-\/admin-\/edificios.Bll/Interfaces/IAuthManager.cs@{terravital-\/admin-\/edificios.Bll/Interfaces/IAuthManager.cs}}
+\mbox{\hyperlink{_i_auth_manager_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00003}00003 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00005}\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{00005}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{terravital\_admin\_edificios.Bll.Interfaces}}}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00006}00006 \{}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00007}\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{00007}}     \textcolor{keyword}{public} \textcolor{keyword}{interface }\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{IAuthManager}}}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00008}00008     \{}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00009}\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_adf229eb1751c2105a01d86da157b0b0e}{00009}}         Task<IEnumerable<IdentityError>> \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_adf229eb1751c2105a01d86da157b0b0e}{Register}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{ApiUserDto}} userDto);}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00010}\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_aea9351ed4ea1e6dfd37c4e82c34eea8c}{00010}}         Task<AuthResponseDto> \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_aea9351ed4ea1e6dfd37c4e82c34eea8c}{Login}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{LoginDto}} loginDto);}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00011}\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_a11a3549354ca5a16286bea7d0343432c}{00011}}         Task<string> \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_a11a3549354ca5a16286bea7d0343432c}{CreateRefreshToken}}();}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00012}\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_aea8d8160f394cd03662baceff55916da}{00012}}         Task<AuthResponseDto> \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager_aea8d8160f394cd03662baceff55916da}{VerifyRefreshToken}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{AuthResponseDto}} request);}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00013}00013     \}}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00014}00014 \}}
+\DoxyCodeLine{\Hypertarget{_i_auth_manager_8cs_source_l00015}00015 }
+
+\end{DoxyCode}

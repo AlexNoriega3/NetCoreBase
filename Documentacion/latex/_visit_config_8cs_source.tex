@@ -1,0 +1,36 @@
+\hypertarget{_visit_config_8cs_source}{}\doxysection{Visit\+Config.\+cs}
+\label{_visit_config_8cs_source}\index{terravital-\/admin-\/edificios.Models/Entities/Settings/VisitConfig.cs@{terravital-\/admin-\/edificios.Models/Entities/Settings/VisitConfig.cs}}
+\mbox{\hyperlink{_visit_config_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore;}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.EntityFrameworkCore.Metadata.Builders;}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00004}00004 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_entities_1_1_settings}{terravital\_admin\_edificios.Models.Entities.Settings}}}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00006}\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_settings_1_1_visit_config}{00006}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_settings_1_1_visit_config}{VisitConfig}} : IEntityTypeConfiguration<Visit>}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00007}00007     \{}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00008}\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_settings_1_1_visit_config_a2fc2c109caa8fc228931b33300fd80d3}{00008}}         \textcolor{keyword}{public} \textcolor{keywordtype}{void} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_settings_1_1_visit_config_a2fc2c109caa8fc228931b33300fd80d3}{Configure}}(EntityTypeBuilder<Visit> \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}})}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00009}00009         \{}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00010}00010             \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Property(e => e.VisitId)}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00011}00011             .ValueGeneratedOnAdd();}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00013}00013             \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.HasKey(p => p.VisitId);}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00014}00014            }
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00015}00015             \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Property(e => e.Active)}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00016}00016                     .HasDefaultValueSql(\textcolor{stringliteral}{"{}1"{}});}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00018}00018             \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Property(e => e.CreateDate)}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00019}00019                     .HasColumnType(\textcolor{stringliteral}{"{}datetime"{}})}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00020}00020                     .HasDefaultValueSql(\textcolor{stringliteral}{"{}NOW()"{}});}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00022}00022             \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Property(e => e.CreateBy)}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00023}00023                 .HasColumnType(\textcolor{stringliteral}{"{}varchar(100)"{}})}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00024}00024                 .HasMaxLength(100);}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00026}00026             \mbox{\hyperlink{_program_8cs_a2f78352277081c620fd4cf92a5ce15e5}{builder}}.Property(e => e.Date)}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00027}00027                     .HasColumnType(\textcolor{stringliteral}{"{}date"{}});}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00028}00028         \}}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00029}00029     \}}
+\DoxyCodeLine{\Hypertarget{_visit_config_8cs_source_l00030}00030 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,4 @@
+var classterravital__admin__edificios_1_1_bll_1_1_factory_services_1_1_u_o_w_1_1_repositories_1_1_contact_repository =
+[
+    [ "ContactRepository", "classterravital__admin__edificios_1_1_bll_1_1_factory_services_1_1_u_o_w_1_1_repositories_1_1_contact_repository.html#a0ac51fd630d01dc56adf80890ba072af", null ]
+];

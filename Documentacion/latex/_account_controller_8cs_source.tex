@@ -1,0 +1,108 @@
+\hypertarget{_account_controller_8cs_source}{}\doxysection{Account\+Controller.\+cs}
+\label{_account_controller_8cs_source}\index{terravital-\/admin-\/edificios-\/webapi/Controllers/AccountController.cs@{terravital-\/admin-\/edificios-\/webapi/Controllers/AccountController.cs}}
+\mbox{\hyperlink{_account_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} System.Linq;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} Microsoft.AspNetCore.Http;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00007}00007 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00008}00008 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00010}\mbox{\hyperlink{namespaceterravital__admin__edificios__webapi}{00010}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios__webapi_1_1_controllers}{terravital\_admin\_edificios\_webapi.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00011}00011 \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00012}00012     [Route(\textcolor{stringliteral}{"{}api/[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00013}00013     [ApiController]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00014}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}{00014}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller}{AccountController}} : ControllerBase}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00016}00016         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{IAuthManager}} \_authManager;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00017}00017         \textcolor{keyword}{private} readonly ILogger<AccountController> \_logger;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00019}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ab668ca0aa7cf03436d6c578a2d5d1513}{00019}}         \textcolor{keyword}{public} \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ab668ca0aa7cf03436d6c578a2d5d1513}{AccountController}}(\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{IAuthManager}} authManager, ILogger<AccountController> logger)}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00020}00020         \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00021}00021             this.\_authManager = authManager;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00022}00022             this.\_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00023}00023         \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00038}00038         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00039}00039         [Route(\textcolor{stringliteral}{"{}registrar"{}})]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00040}00040         [ProducesResponseType(StatusCodes.Status400BadRequest)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00041}00041         [ProducesResponseType(StatusCodes.Status500InternalServerError)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00042}00042         [ProducesResponseType(StatusCodes.Status200OK)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00043}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a640097aab1ae8a8286b0eccb53b9c2f4}{00043}}         \textcolor{keyword}{public} async Task<ActionResult> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a640097aab1ae8a8286b0eccb53b9c2f4}{Register}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{ApiUserDto}} apiUserDto)}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00044}00044         \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00045}00045             \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Registration attemp for \{apiUserDto.Email\}"{}});}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00046}00046             \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00047}00047             \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00048}00048                 var errors = await \_authManager.Register(apiUserDto);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00050}00050                 \textcolor{keywordflow}{if} (errors.Any())}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00051}00051                 \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00052}00052                     \textcolor{keywordflow}{foreach} (var error \textcolor{keywordflow}{in} errors)}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00053}00053                     \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00054}00054                         ModelState.AddModelError(error.Code, error.Description);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00056}00056                     \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00057}00057                     \textcolor{keywordflow}{return} BadRequest(ModelState);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00058}00058                 \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00059}00059                 \textcolor{keywordflow}{return} Ok();}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00060}00060             \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00061}00061             \textcolor{keywordflow}{catch} (Exception ex)}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00062}00062             \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00063}00063                 \_logger.LogError(ex, \$\textcolor{stringliteral}{"{}Something went wrong in the \{nameof(Register)\} -\/ User Registration"{}} +}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00064}00064                     \$\textcolor{stringliteral}{"{}attemtp for \{apiUserDto.Email\}"{}});}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00065}00065                 \textcolor{keywordflow}{return} Problem(\$\textcolor{stringliteral}{"{}Somenthing went wrong in the \{nameof(Register)\}. Please contact support."{}}, statusCode: 500);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00066}00066             \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00067}00067         \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00082}00082         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00083}00083         [Route(\textcolor{stringliteral}{"{}login"{}})]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00084}00084         [ProducesResponseType(StatusCodes.Status400BadRequest)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00085}00085         [ProducesResponseType(StatusCodes.Status401Unauthorized)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00086}00086         [ProducesResponseType(StatusCodes.Status500InternalServerError)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00087}00087         [ProducesResponseType(StatusCodes.Status200OK)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00088}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ae7c0911a86ce9f8e3bd41a3c2d4eaa8c}{00088}}         \textcolor{keyword}{public} async Task<ActionResult> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_ae7c0911a86ce9f8e3bd41a3c2d4eaa8c}{Login}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{LoginDto}} loginDto)}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00089}00089         \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00090}00090             \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Login Attempt for \{loginDto.Email\} "{}});}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00091}00091             var authResponse = await \_authManager.Login(loginDto);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00093}00093             \textcolor{keywordflow}{if} (authResponse == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00094}00094             \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00095}00095                 \textcolor{keywordflow}{return} Unauthorized();}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00096}00096             \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00097}00097             \textcolor{keywordflow}{return} Ok(authResponse);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00098}00098         \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00114}00114         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00115}00115         [Route(\textcolor{stringliteral}{"{}refreshtoken"{}})]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00116}00116         [ProducesResponseType(StatusCodes.Status400BadRequest)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00117}00117         [ProducesResponseType(StatusCodes.Status500InternalServerError)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00118}00118         [ProducesResponseType(StatusCodes.Status200OK)]}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00119}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a3b4d0187d2d20bf2a8f8d9794f4c82f1}{00119}}         \textcolor{keyword}{public} async Task<ActionResult> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_account_controller_a3b4d0187d2d20bf2a8f8d9794f4c82f1}{RefreshToken}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{AuthResponseDto}} request)}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00120}00120         \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00121}00121             var authResponse = await \_authManager.VerifyRefreshToken(request);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00123}00123             \textcolor{keywordflow}{if} (authResponse == \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00124}00124             \{}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00125}00125                 \textcolor{keywordflow}{return} Unauthorized();}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00128}00128             \textcolor{keywordflow}{return} Ok(authResponse);}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00129}00129         \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00132}00132         \textcolor{comment}{//[HttpPost]}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00133}00133         \textcolor{comment}{//public async Task<IActionResult> Logout()}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00134}00134         \textcolor{comment}{//\{}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00135}00135         \textcolor{comment}{//    //await signInManager.SignOutAsync();}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00136}00136         \textcolor{comment}{//    //return RedirectToAction("{}Index"{}, "{}Home"{});}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00137}00137         \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00138}00138 }
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00139}00139     \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00140}00140 \}}
+\DoxyCodeLine{\Hypertarget{_account_controller_8cs_source_l00141}00141 }
+
+\end{DoxyCode}

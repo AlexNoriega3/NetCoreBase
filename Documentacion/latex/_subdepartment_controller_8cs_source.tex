@@ -1,0 +1,45 @@
+\hypertarget{_subdepartment_controller_8cs_source}{}\doxysection{Subdepartment\+Controller.\+cs}
+\label{_subdepartment_controller_8cs_source}\index{terravital-\/admin-\/edificios-\/webapi/Controllers/SubdepartmentController.cs@{terravital-\/admin-\/edificios-\/webapi/Controllers/SubdepartmentController.cs}}
+\mbox{\hyperlink{_subdepartment_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.ModelBinding;}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios__webapi_1_1_controllers}{terravital\_admin\_edificios\_webapi.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00010}00010     [Route(\textcolor{stringliteral}{"{}api/[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00011}00011     [ApiController]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00012}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller}{SubdepartmentController}} : ControllerBase}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_subdepartments_bll}{ISubdepartmentsBll}} \_subDepartmentBll;}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00016}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a91d4e93798effd46cf43e77cbb1affd5}{00016}}         \textcolor{keyword}{public} \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a91d4e93798effd46cf43e77cbb1affd5}{SubdepartmentController}}(\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_subdepartments_bll}{ISubdepartmentsBll}} subDepartment)}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00017}00017         => this.\_subDepartmentBll = subDepartment;}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00018}00018         }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00019}00019         [HttpGet]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00020}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_ae67c88bc3e04234fc103bfef8488e8fb}{00020}}         \textcolor{keyword}{public} async Task<ActionResult<IEnumerable<SubdepartmentDto>>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_ae67c88bc3e04234fc103bfef8488e8fb}{Get}}()}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00021}00021          => await this.\_subDepartmentBll.Get();}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00023}00023         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00024}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a8bfaadcfe9342bbeeaa771d68f8f30cb}{00024}}         \textcolor{keyword}{public} async Task<ActionResult<string>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a8bfaadcfe9342bbeeaa771d68f8f30cb}{Post}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_subdepartment_dto}{SubdepartmentDto}} subDepartment) =>}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00025}00025           await this.\_subDepartmentBll.Add(subDepartment);}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00027}00027         [HttpGet(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00028}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a16090a6b6bfdafbdeebcacf08ad9a699}{00028}}         \textcolor{keyword}{public} async Task<ActionResult<SubdepartmentDto>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a16090a6b6bfdafbdeebcacf08ad9a699}{Get}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00029}00029             await this.\_subDepartmentBll.Get(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00031}00031         [HttpPut(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00032}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a0f7ce15fff5376be3bbe93b6a9a00e6d}{00032}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_a0f7ce15fff5376be3bbe93b6a9a00e6d}{Put}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, [BindRequired] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_subdepartment_dto}{SubdepartmentDto}} edit) =>}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00033}00033            await this.\_subDepartmentBll.Edit(\textcolor{keywordtype}{id}, edit);}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00035}00035         [HttpDelete(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00036}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_af0003ad42245b0f7e637096ac427ca84}{00036}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_subdepartment_controller_af0003ad42245b0f7e637096ac427ca84}{Delete}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00037}00037            await this.\_subDepartmentBll.Delete(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{_subdepartment_controller_8cs_source_l00039}00039 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,154 @@
+\hypertarget{_auth_manager_bll_8cs_source}{}\doxysection{Auth\+Manager\+Bll.\+cs}
+\label{_auth_manager_bll_8cs_source}\index{terravital-\/admin-\/edificios.Bll/AuthManagerBll.cs@{terravital-\/admin-\/edificios.Bll/AuthManagerBll.cs}}
+\mbox{\hyperlink{_auth_manager_bll_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00001}00001 \textcolor{keyword}{using} System;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00002}00002 \textcolor{keyword}{using} System.IdentityModel.Tokens.Jwt;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Security.Claims;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Text;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00005}00005 \textcolor{keyword}{using} AutoMapper;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00006}00006 \textcolor{keyword}{using} Microsoft.AspNetCore.Identity;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00007}00007 \textcolor{keyword}{using} Microsoft.Extensions.Configuration;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00008}00008 \textcolor{keyword}{using} Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00009}00009 \textcolor{keyword}{using} Microsoft.IdentityModel.Tokens;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00010}00010 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00011}00011 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00012}00012 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_entities}{Entities}};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00014}\mbox{\hyperlink{namespaceterravital__admin__edificios}{00014}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{terravital\_admin\_edificios.Bll}}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00016}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}{00016}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll}{AuthManagerBll}} : \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_auth_manager}{IAuthManager}}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00017}00017     \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00018}00018         \textcolor{keyword}{private} readonly IMapper \_mapper;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00019}00019         \textcolor{keyword}{private} readonly UserManager<AppUsuario> \_userManager;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00020}00020         \textcolor{keyword}{private} readonly IConfiguration \_configuration;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00021}00021         \textcolor{keyword}{private} readonly ILogger<AuthManagerBll> \_logger;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00022}00022         \textcolor{keyword}{private} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_app_usuario}{AppUsuario}} \_user;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00024}00024         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \_loginProvider = \textcolor{stringliteral}{"{}HotelListingApi"{}};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00025}00025         \textcolor{keyword}{private} \textcolor{keyword}{const} \textcolor{keywordtype}{string} \_refreshToken = \textcolor{stringliteral}{"{}RefreshToken"{}};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00027}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a1b6005c4ab8fc587e57f8d69520a7077}{00027}}         \textcolor{keyword}{public} \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a1b6005c4ab8fc587e57f8d69520a7077}{AuthManagerBll}}(IMapper mapper, UserManager<AppUsuario> userManager, IConfiguration configuration, ILogger<AuthManagerBll> logger)}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00028}00028         \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00029}00029             this.\_mapper = mapper;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00030}00030             this.\_userManager = userManager;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00031}00031             this.\_configuration = configuration;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00032}00032             this.\_logger = logger;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00033}00033         \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00035}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}{00035}}         \textcolor{keyword}{public} async Task<string> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}{CreateRefreshToken}}()}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00036}00036         \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00037}00037             await \_userManager.RemoveAuthenticationTokenAsync(\_user, \_loginProvider, \_refreshToken);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00038}00038             var newRefreshToken = await \_userManager.GenerateUserTokenAsync(\_user, \_loginProvider, \_refreshToken);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00039}00039             var result = await \_userManager.SetAuthenticationTokenAsync(\_user, \_loginProvider, \_refreshToken, newRefreshToken);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00040}00040             \textcolor{keywordflow}{return} newRefreshToken;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00041}00041         \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00043}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8751088e8451a4587281b8364f178fca}{00043}}         \textcolor{keyword}{public} async Task<AuthResponseDto> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8751088e8451a4587281b8364f178fca}{Login}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto}{LoginDto}} loginDto)}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00044}00044         \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00045}00045             \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Looking for user with email \{loginDto.Email\}"{}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00046}00046             \_user = await \_userManager.FindByEmailAsync(loginDto.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto_af9228823e0f93bc820e0e05566fafdf0}{Email}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00047}00047             \textcolor{keywordtype}{bool} isValidUser = await \_userManager.CheckPasswordAsync(\_user, loginDto.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto_a8b1c2a7830344c382a02e109b87a0196}{Password}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00049}00049             \textcolor{keywordflow}{if} (\_user == \textcolor{keyword}{null} || isValidUser == \textcolor{keyword}{false})}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00050}00050             \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00051}00051                 \_logger.LogWarning(\$\textcolor{stringliteral}{"{}User with email \{loginDto.Email\} was not found"{}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00052}00052                 \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00053}00053             \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00055}00055             var token = await GenerateToken();}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00056}00056             \_logger.LogInformation(\$\textcolor{stringliteral}{"{}Token generated for user with email \{loginDto.Email\} | Token: \{token\}"{}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00058}00058             \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{AuthResponseDto}}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00059}00059             \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00060}00060                 Token = token,}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00061}00061                 UserId = \_user.Id,}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00062}00062                 RefreshToken = await \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}{CreateRefreshToken}}()}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00063}00063             \};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00064}00064         \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00066}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a9e11284a44999e2294b8db6894834570}{00066}}         \textcolor{keyword}{public} async Task<IEnumerable<IdentityError>> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a9e11284a44999e2294b8db6894834570}{Register}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_api_user_dto}{ApiUserDto}} userDto)}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00067}00067         \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00068}00068             \_user = \_mapper.Map<\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_entities_1_1_app_usuario}{AppUsuario}}>(userDto);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00069}00069             \_user.UserName = userDto.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto_af9228823e0f93bc820e0e05566fafdf0}{Email}};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00071}00071             var result = await \_userManager.CreateAsync(\_user, userDto.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_login_dto_a8b1c2a7830344c382a02e109b87a0196}{Password}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00073}00073             \textcolor{keywordflow}{if} (result.Succeeded)}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00074}00074             \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00075}00075                 await \_userManager.AddToRoleAsync(\_user, \textcolor{stringliteral}{"{}User"{}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00076}00076             \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00078}00078             \textcolor{keywordflow}{return} result.Errors;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00079}00079         \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00081}\mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8b7a9a05e1a39b768d84c8abf12610bf}{00081}}         \textcolor{keyword}{public} async Task<AuthResponseDto> \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a8b7a9a05e1a39b768d84c8abf12610bf}{VerifyRefreshToken}}(\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{AuthResponseDto}} request)}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00082}00082         \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00083}00083             var jwtSecurityTokenHandler = \textcolor{keyword}{new} JwtSecurityTokenHandler();}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00084}00084             var tokenContent = jwtSecurityTokenHandler.ReadJwtToken(request.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto_a7b6fd30796cf37f62f2528a089f0b84e}{Token}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00085}00085             var username = tokenContent.Claims.ToList().FirstOrDefault(q => q.Type == JwtRegisteredClaimNames.Email)?.Value;}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00086}00086             \_user = await \_userManager.FindByNameAsync(username);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00088}00088             \textcolor{keywordflow}{if} (\_user == \textcolor{keyword}{null} || \_user.Id != request.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto_aa4785dbd11a5308523b52232f2d4234a}{UserId}})}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00089}00089             \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00090}00090                 \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00091}00091             \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00093}00093             var isValidRefreshToken = await \_userManager.VerifyUserTokenAsync(\_user, \_loginProvider, \_refreshToken, request.\mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto_af2e2b5363d4edc129b438d4ecadaec5a}{RefreshToken}});}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00095}00095             \textcolor{keywordflow}{if} (isValidRefreshToken)}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00096}00096             \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00097}00097                 var token = await GenerateToken();}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00098}00098                 \textcolor{keywordflow}{return} \textcolor{keyword}{new} \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_auth_response_dto}{AuthResponseDto}}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00099}00099                 \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00100}00100                     Token = token,}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00101}00101                     UserId = \_user.Id,}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00102}00102                     RefreshToken = await \mbox{\hyperlink{classterravital__admin__edificios_1_1_bll_1_1_auth_manager_bll_a0e343fd6e27c8904347c0389c78779e9}{CreateRefreshToken}}()}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00103}00103                 \};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00104}00104             \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00106}00106             await \_userManager.UpdateSecurityStampAsync(\_user);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00107}00107             \textcolor{keywordflow}{return} \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00108}00108         \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00110}00110         \textcolor{keyword}{private} async Task<string> GenerateToken()}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00111}00111         \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00112}00112             var securitykey = \textcolor{keyword}{new} SymmetricSecurityKey(Encoding.UTF8.GetBytes(\_configuration[\textcolor{stringliteral}{"{}JwtSettings:Key"{}}]));}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00114}00114             var credentials = \textcolor{keyword}{new} SigningCredentials(securitykey, SecurityAlgorithms.HmacSha256);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00115}00115 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00116}00116             var roles = await \_userManager.GetRolesAsync(\_user);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00117}00117             var roleClaims = roles.Select(x => \textcolor{keyword}{new} Claim(ClaimTypes.Role, x)).ToList();}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00118}00118             var userClaims = await \_userManager.GetClaimsAsync(\_user);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00120}00120             var claims = \textcolor{keyword}{new} List<Claim>}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00121}00121             \{}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00122}00122                 \textcolor{keyword}{new} Claim(JwtRegisteredClaimNames.Sub, \_user.Email),}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00123}00123                 \textcolor{keyword}{new} Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00124}00124                 \textcolor{keyword}{new} Claim(JwtRegisteredClaimNames.Email, \_user.Email),}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00125}00125                 \textcolor{keyword}{new} Claim(\textcolor{stringliteral}{"{}uid"{}}, \_user.Id),}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00126}00126             \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00127}00127             .Union(userClaims).Union(roleClaims);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00129}00129             var token = \textcolor{keyword}{new} JwtSecurityToken(}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00130}00130                 issuer: \_configuration[\textcolor{stringliteral}{"{}JwtSettings:Issuer"{}}],}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00131}00131                 audience: \_configuration[\textcolor{stringliteral}{"{}JwtSettings:Audience"{}}],}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00132}00132                 claims: claims,}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00133}00133                 expires: DateTime.Now.AddMinutes(Convert.ToInt32(\_configuration[\textcolor{stringliteral}{"{}JwtSettings:DurationInMinutes"{}}])),}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00134}00134                 signingCredentials: credentials}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00135}00135                 );}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00136}00136 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00137}00137             \textcolor{keywordflow}{return} \textcolor{keyword}{new} JwtSecurityTokenHandler().WriteToken(token);}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00138}00138         \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00140}00140         \textcolor{comment}{//public async Task<AuthResponseDto> Logout(LoginDto loginDto)}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00141}00141         \textcolor{comment}{//\{}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00142}00142            }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00144}00144         \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00145}00145 }
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00146}00146     \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00147}00147 \}}
+\DoxyCodeLine{\Hypertarget{_auth_manager_bll_8cs_source_l00148}00148 }
+
+\end{DoxyCode}

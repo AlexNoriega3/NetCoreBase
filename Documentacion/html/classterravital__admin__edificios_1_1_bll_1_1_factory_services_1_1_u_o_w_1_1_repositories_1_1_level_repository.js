@@ -1,0 +1,4 @@
+var classterravital__admin__edificios_1_1_bll_1_1_factory_services_1_1_u_o_w_1_1_repositories_1_1_level_repository =
+[
+    [ "LevelRepository", "classterravital__admin__edificios_1_1_bll_1_1_factory_services_1_1_u_o_w_1_1_repositories_1_1_level_repository.html#a3e5eea7e53305cd222f277fe9c8b06ff", null ]
+];

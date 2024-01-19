@@ -1,0 +1,45 @@
+\hypertarget{_screen_controller_8cs_source}{}\doxysection{Screen\+Controller.\+cs}
+\label{_screen_controller_8cs_source}\index{terravital-\/admin-\/edificios-\/webapi/Controllers/ScreenController.cs@{terravital-\/admin-\/edificios-\/webapi/Controllers/ScreenController.cs}}
+\mbox{\hyperlink{_screen_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.ModelBinding;}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios__webapi_1_1_controllers}{terravital\_admin\_edificios\_webapi.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00010}00010     [Route(\textcolor{stringliteral}{"{}api/[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00011}00011     [ApiController]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00012}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller}{ScreenController}} : ControllerBase}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_screen_bll}{IScreenBll}} \_screenBll;}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00016}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_ab7051c7c83fd207cab85b47f84cf710c}{00016}}         \textcolor{keyword}{public} \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_ab7051c7c83fd207cab85b47f84cf710c}{ScreenController}}(\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_screen_bll}{IScreenBll}} screen)}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00017}00017         => this.\_screenBll = screen;}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00018}00018         }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00019}00019         [HttpGet]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00020}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a294055fc52e144d6fd72dba33a2af59b}{00020}}         \textcolor{keyword}{public} async Task<ActionResult<IEnumerable<ScreenDto>>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a294055fc52e144d6fd72dba33a2af59b}{Get}}()}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00021}00021          => await this.\_screenBll.Get();}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00023}00023         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00024}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_ace815f16d190fee425e19e84fab83ed2}{00024}}         \textcolor{keyword}{public} async Task<ActionResult<string>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_ace815f16d190fee425e19e84fab83ed2}{Post}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_screen_dto}{ScreenDto}} screen) =>}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00025}00025           await this.\_screenBll.Add(screen);}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00027}00027         [HttpGet(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00028}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a5bf86aa4c0bfcca72ee972c018ac9a8e}{00028}}         \textcolor{keyword}{public} async Task<ActionResult<ScreenDto>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a5bf86aa4c0bfcca72ee972c018ac9a8e}{Get}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00029}00029             await this.\_screenBll.Get(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00031}00031         [HttpPut(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00032}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a5aa7905fb87714e0acc6734b63e26798}{00032}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a5aa7905fb87714e0acc6734b63e26798}{Put}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, [BindRequired] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_screen_dto}{ScreenDto}} edit) =>}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00033}00033            await this.\_screenBll.Edit(\textcolor{keywordtype}{id}, edit);}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00035}00035         [HttpDelete(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00036}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a4b252d0934abc2f9e09fbb94873942e5}{00036}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_screen_controller_a4b252d0934abc2f9e09fbb94873942e5}{Delete}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00037}00037            await this.\_screenBll.Delete(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{_screen_controller_8cs_source_l00039}00039 \}}
+
+\end{DoxyCode}

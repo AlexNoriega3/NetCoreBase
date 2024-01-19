@@ -1,0 +1,45 @@
+\hypertarget{_module_controller_8cs_source}{}\doxysection{Module\+Controller.\+cs}
+\label{_module_controller_8cs_source}\index{terravital-\/admin-\/edificios-\/webapi/Controllers/ModuleController.cs@{terravital-\/admin-\/edificios-\/webapi/Controllers/ModuleController.cs}}
+\mbox{\hyperlink{_module_controller_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00001}00001 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc;}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00002}00002 \textcolor{keyword}{using} Microsoft.AspNetCore.Mvc.ModelBinding;}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00003}00003 \textcolor{keyword}{using} System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00004}00004 \textcolor{keyword}{using} System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00005}00005 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll}{Bll}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_bll_1_1_interfaces}{Interfaces}};}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00006}00006 \textcolor{keyword}{using} \mbox{\hyperlink{namespaceterravital__admin__edificios}{terravital\_admin\_edificios}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models}{Models}}.\mbox{\hyperlink{namespaceterravital__admin__edificios_1_1_models_1_1_d_t_os}{DTOs}};}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00008}00008 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespaceterravital__admin__edificios__webapi_1_1_controllers}{terravital\_admin\_edificios\_webapi.Controllers}}}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00010}00010     [Route(\textcolor{stringliteral}{"{}api/[controller]"{}})]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00011}00011     [ApiController]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00012}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller}{00012}}     \textcolor{keyword}{public} \textcolor{keyword}{class }\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller}{ModuleController}} : ControllerBase}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00014}00014         \textcolor{keyword}{private} readonly \mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_module_bll}{IModuleBll}} \_moduleBll;}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00016}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a37f31de0a067430f356bf7937c619760}{00016}}         \textcolor{keyword}{public} \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a37f31de0a067430f356bf7937c619760}{ModuleController}}(\mbox{\hyperlink{interfaceterravital__admin__edificios_1_1_bll_1_1_interfaces_1_1_i_module_bll}{IModuleBll}} module)}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00017}00017         => this.\_moduleBll = module;}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00018}00018         }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00019}00019         [HttpGet]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00020}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_ac4351eef40886b00d98022d770c3ad7b}{00020}}         \textcolor{keyword}{public} async Task<ActionResult<IEnumerable<ModuleDto>>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_ac4351eef40886b00d98022d770c3ad7b}{Get}}()}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00021}00021          => await this.\_moduleBll.Get();}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00023}00023         [HttpPost]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00024}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a5cbaa8939d4e5fee7f21f01ef56f8fbf}{00024}}         \textcolor{keyword}{public} async Task<ActionResult<string>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a5cbaa8939d4e5fee7f21f01ef56f8fbf}{Post}}([FromBody] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_module_dto}{ModuleDto}} module) =>}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00025}00025           await this.\_moduleBll.Add(module);}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00027}00027         [HttpGet(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00028}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a8fe53f886c308829338442f5c0750ee5}{00028}}         \textcolor{keyword}{public} async Task<ActionResult<ModuleDto>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a8fe53f886c308829338442f5c0750ee5}{Get}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00029}00029             await this.\_moduleBll.Get(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00031}00031         [HttpPut(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00032}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_aa38216e1a10a9ae2c5d27e0682ec3873}{00032}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_aa38216e1a10a9ae2c5d27e0682ec3873}{Put}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}, [BindRequired] \mbox{\hyperlink{classterravital__admin__edificios_1_1_models_1_1_d_t_os_1_1_module_dto}{ModuleDto}} edit) =>}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00033}00033            await this.\_moduleBll.Edit(\textcolor{keywordtype}{id}, edit);}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00035}00035         [HttpDelete(\textcolor{stringliteral}{"{}\{id\}"{}})]}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00036}\mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a743b97d91c090c87a0044943a49cce97}{00036}}         \textcolor{keyword}{public} async Task<ActionResult<bool>> \mbox{\hyperlink{classterravital__admin__edificios__webapi_1_1_controllers_1_1_module_controller_a743b97d91c090c87a0044943a49cce97}{Delete}}(\textcolor{keywordtype}{string} \textcolor{keywordtype}{id}) =>}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00037}00037            await this.\_moduleBll.Delete(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{_module_controller_8cs_source_l00039}00039 \}}
+
+\end{DoxyCode}
